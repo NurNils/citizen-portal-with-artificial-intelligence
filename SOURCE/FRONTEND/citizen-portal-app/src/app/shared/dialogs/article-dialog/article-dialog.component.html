@@ -1,0 +1,114 @@
+<h2 mat-dialog-title>{{ 'article-dialog.title' | translate }}</h2>
+<mat-dialog-content *ngIf="articleFormGroup">
+  <p>{{ 'article-dialog.subtitle' | translate }}</p>
+  <!-- Game form -->
+  <form [formGroup]="articleFormGroup">
+    <!-- Activated -->
+    <mat-slide-toggle formControlName="activated">{{ 'activated' | translate }}</mat-slide-toggle>
+    <br />
+    <br />
+
+    <!-- Key -->
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'key' | translate }}</mat-label>
+      <input matInput color="primary" required formControlName="key" />
+    </mat-form-field>
+    <br />
+
+    <!-- Title -->
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'title' | translate }}</mat-label>
+      <input
+        matInput
+        color="primary"
+        required
+        disabled
+        value="{{ articleFormGroup.get('title')?.value[translate.getDefaultLang()] }}"
+      />
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="translateItemService.openTranslateItemDialog(articleFormGroup, 'title')"
+        [ngStyle]="translateItemService.getButtonStyle(articleFormGroup, 'title')"
+      >
+        <mat-icon>language</mat-icon>
+      </button>
+    </mat-form-field>
+    <br />
+
+    <!-- Description -->
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'description' | translate }}</mat-label>
+      <input
+        matInput
+        color="primary"
+        required
+        disabled
+        value="{{ articleFormGroup.get('description')?.value[translate.getDefaultLang()] }}"
+      />
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="
+          translateItemService.openTranslateItemDialog(articleFormGroup, 'description', true)
+        "
+        [ngStyle]="translateItemService.getButtonStyle(articleFormGroup, 'description')"
+      >
+        <mat-icon>language</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <!-- Thumbnail -->
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'thumbnail' | translate }}</mat-label>
+      <input matInput color="primary" required formControlName="thumbnail" />
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="imageService.openImageGalleryDialog(articleFormGroup, 'thumbnail', false)"
+      >
+        <mat-icon>insert_photo</mat-icon>
+      </button>
+    </mat-form-field>
+    <br />
+
+    <!-- Categories -->
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'category' | translate }}</mat-label>
+      <mat-select formControlName="categories" multiple>
+        <mat-select-trigger>
+          {{
+            articleFormGroup.get('categories')?.value
+              ? ('categories.' + articleFormGroup.get('categories')?.value[0] | translate)
+              : ''
+          }}
+          <span
+            *ngIf="articleFormGroup.get('categories')?.value?.length > 1"
+            class="additional-selection"
+          >
+            (+{{ articleFormGroup.get('categories')?.value.length - 1 }}
+            {{
+              (articleFormGroup.get('categories')?.value?.length === 2 ? 'other' : 'others')
+                | translate
+            }})
+          </span>
+        </mat-select-trigger>
+        <mat-option *ngFor="let category of categoryList" [value]="category">{{
+          'categories.' + category | translate
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>{{ 'cancel' | translate }}</button>
+  <button
+    mat-raised-button
+    type="submit"
+    color="primary"
+    [disabled]="articleFormGroup?.invalid"
+    (click)="save()"
+  >
+    {{ 'save' | translate }}
+  </button>
+</mat-dialog-actions>

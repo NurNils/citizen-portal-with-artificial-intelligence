@@ -1,0 +1,10 @@
+<!-- Article -->
+<mat-card *ngIf="article" class="article">
+  <!-- Category -->
+  <p class="category">{{ article.categories }}</p>
+  <!-- Title -->
+  <h1 class="title">{{ article.title['de'] }}</h1>
+  <!-- Thumbnail -->
+  <img class="thumbnail" [src]="article.thumbnail" />
+  <markdown [data]="article.description['de']"></markdown>
+</mat-card>

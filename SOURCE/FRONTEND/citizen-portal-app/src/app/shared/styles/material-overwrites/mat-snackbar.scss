@@ -1,0 +1,16 @@
+// MatSnackbar overwrites
+.mat-snackbar-success {
+  color: white;
+  background-color: #4caf50;
+  .mat-simple-snackbar-action {
+    color: white;
+  }
+}
+
+.mat-snackbar-error {
+  color: white;
+  background-color: #f44336;
+  .mat-simple-snackbar-action {
+    color: white;
+  }
+}

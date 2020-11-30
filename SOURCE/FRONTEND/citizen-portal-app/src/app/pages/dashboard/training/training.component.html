@@ -1,0 +1,94 @@
+<!-- Training AI -->
+<div id="training">
+  <!-- Overview -->
+  <div id="overview">
+    <div class="item">
+      <p><small>Insgesamt</small></p>
+      <h2>{{ overview.categories.length | number }} Kategorien</h2>
+      <p>sind bereits angelegt:</p>
+      <p>
+        <small>{{ overview.categories.join(', ') }}</small>
+      </p>
+    </div>
+    <div class="item">
+      <mat-icon>psychology</mat-icon>
+      <h2>{{ overview.total | number }}</h2>
+      <p>Insgesamte Trainings</p>
+    </div>
+    <div class="item">
+      <p><small>davon sind</small></p>
+      <h2>{{ (dataSource ? dataSource.data.length : 0) | number }}</h2>
+      <p>von dir beigetragen</p>
+    </div>
+  </div>
+
+  <!-- Information -->
+  <p id="information">{{ 'training-information' | translate }}</p>
+
+  <!-- Form Group -->
+  <form [formGroup]="trainingFormGroup" id="training-form" (ngSubmit)="submitTraining()">
+    <mat-form-field appearance="fill" id="training-form-category">
+      <mat-label>{{ 'choose-category' | translate }}</mat-label>
+      <mat-select formControlName="category">
+        <mat-option *ngFor="let category of overview.categories" [value]="category">
+          {{ 'categories.' + category | translate }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill" id="training-form-search">
+      <mat-label>{{ 'search-terms' | translate }}</mat-label>
+      <input formControlName="search" matInput />
+    </mat-form-field>
+    <button type="submit" color="primary" mat-fab [disabled]="trainingFormGroup.invalid">
+      <mat-icon>add</mat-icon>
+    </button>
+  </form>
+
+  <!-- Own trainings -->
+  <div class="mat-elevation-z8" id="training-table">
+    <!-- Table -->
+    <table mat-table [dataSource]="dataSource" matSort matSortActive="_id" matSortDirection="desc">
+      <!-- _Id Column -->
+      <ng-container matColumnDef="_id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>{{ '_id' | translate }}</th>
+        <td mat-cell *matCellDef="let row">{{ row._id }}</td>
+      </ng-container>
+
+      <!-- Category Column -->
+      <ng-container matColumnDef="category">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>{{ 'category' | translate }}</th>
+        <td mat-cell *matCellDef="let row">{{ row.category }}</td>
+      </ng-container>
+
+      <!-- Search Term Column -->
+      <ng-container matColumnDef="search">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>{{ 'search' | translate }}</th>
+        <td mat-cell *matCellDef="let row">{{ row.search }}</td>
+      </ng-container>
+
+      <!-- Trained Column -->
+      <ng-container matColumnDef="trained">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>{{ 'status' | translate }}</th>
+        <td mat-cell *matCellDef="let row">
+          <mat-icon class="success" *ngIf="row.trained" matTooltip="{{ 'trained' | translate }}"
+            >check_circle_outline</mat-icon
+          >
+          <mat-icon class="pending" *ngIf="!row.trained" matTooltip="{{ 'pending' | translate }}"
+            >pending</mat-icon
+          >
+        </td>
+      </ng-container>
+
+      <!-- UserId Column -->
+      <ng-container matColumnDef="userId">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>{{ 'userId' | translate }}</th>
+        <td mat-cell *matCellDef="let row">{{ row.userId }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[10, 25, 50, 100]"></mat-paginator>
+  </div>
+</div>

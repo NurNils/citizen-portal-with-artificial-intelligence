@@ -1,0 +1,89 @@
+@import '../../../shared/styles/';
+
+#training {
+  #overview {
+    padding: 60px 0;
+    max-width: 750px;
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    .item {
+      flex: 1;
+    }
+    h2 {
+      font-size: 36px;
+      line-height: 10px;
+    }
+    p {
+      font-size: 20px;
+    }
+    mat-icon {
+      color: $color-green-500;
+      font-size: 100px;
+      width: 100px;
+      height: 100px;
+      -webkit-animation: pulsate 4s ease-out;
+      -webkit-animation-iteration-count: infinite;
+      opacity: 0.3;
+    }
+  }
+  #information {
+    text-align: center;
+    font-size: 24px;
+    padding: 0 20px;
+    line-height: 30px;
+    max-width: 750px;
+    margin: 0 auto 70px;
+  }
+  #training-form {
+    display: flex;
+    padding: 0 25px;
+    max-width: 1250px;
+    margin: 0 auto;
+    #training-form-category,
+    #training-form-search {
+      flex: 1;
+      margin: 0 5px;
+      font-size: 22px;
+    }
+
+    button[type='submit'] {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  #training-table {
+    table {
+      width: 100%;
+      text-align: left;
+      .success {
+        color: $color-green-500;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .pending {
+        color: $color-orange-500;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+@include desktop-812 {
+  #training {
+    #overview {
+      flex-direction: column;
+    }
+    #training-form {
+      padding: 0 10px;
+      flex-direction: column;
+      #training-form-category,
+      #training-form-search {
+        margin: 0 5px;
+        font-size: 16px;
+      }
+    }
+  }
+}

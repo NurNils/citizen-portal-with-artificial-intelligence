@@ -1,0 +1,20 @@
+#companies {
+  padding: 5px;
+  .company {
+    display: flex;
+    margin: 5px 0;
+    .title {
+      flex: 2;
+    }
+    .actions {
+      flex: 1;
+      text-align: right;
+      button {
+        margin: 3px;
+        mat-icon {
+          margin-right: 3px;
+        }
+      }
+    }
+  }
+}

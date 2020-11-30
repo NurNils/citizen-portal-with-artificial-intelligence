@@ -1,0 +1,15 @@
+// Global scrollbar style
+::-webkit-scrollbar {
+  width: 5px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #e0e0e0 !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3f51b5 !important;
+  &:hover {
+    background: #303f9f !important;
+  }
+}

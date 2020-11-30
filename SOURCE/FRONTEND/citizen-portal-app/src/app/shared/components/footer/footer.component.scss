@@ -1,0 +1,255 @@
+@import '../../styles';
+
+footer {
+  display: flex;
+  background-color: $color-grey-900;
+  justify-content: center;
+  align-items: center;
+  padding: 45px 120px;
+
+  .section-wrapper {
+    flex: 1;
+
+    &.links {
+      display: flex;
+      text-align: left;
+      align-items: center;
+
+      .links-container {
+        flex: 1;
+
+        .link {
+          display: block;
+          font-size: 14px;
+          font-weight: 500;
+
+          span {
+            color: $color-white;
+            transition: color 0.2s ease;
+
+            &:hover {
+              color: $color-grey-600;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    &.social {
+      flex: 2;
+      text-align: center;
+
+      .social-media {
+        display: inline-block;
+        margin: 10px;
+        color: $color-white;
+        font-size: 30px;
+        transition: color 0.2s ease;
+
+        mat-icon {
+          font-size: 30px;
+        }
+
+        &.instagram {
+          &:hover {
+            color: $color-platform-instagram;
+          }
+        }
+        &.twitter {
+          &:hover {
+            color: $color-platform-twitter;
+          }
+        }
+        &.github {
+          &:hover {
+            color: $color-platform-github;
+          }
+        }
+        &:hover {
+          animation: jelly 0.75s ease;
+        }
+      }
+
+      .images {
+        img {
+          height: 55px;
+          padding: 10px;
+          &.badge {
+            height: 100px;
+          }
+        }
+      }
+    }
+
+    &.legal {
+      display: flex;
+      align-items: center;
+      text-align: right;
+
+      .legal-matter-links,
+      .legal-information {
+        flex: 1;
+        text-align: left;
+        transition: text-align 0.3s ease;
+      }
+
+      .legal-matter-links {
+        .legal-matter-link {
+          display: block;
+          font-size: 13px;
+
+          span {
+            color: $color-white;
+            transition: color 0.2s ease;
+
+            &:hover {
+              color: $color-grey-600;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .legal-information {
+        .legal-text {
+          font-size: 13px;
+          color: $color-white;
+          span {
+            display: block;
+          }
+        }
+        img {
+          vertical-align: middle;
+          height: 20px;
+          margin: 3px 2px 4px 2px;
+        }
+        a {
+          font-size: 13px;
+          color: $color-white;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        .social {
+          flex: 2;
+          margin-top: 5px;
+
+          .social-media {
+            display: inline-block;
+            margin-right: 10px;
+            color: $color-white;
+            font-size: 16px;
+            transition: color 0.2s ease;
+
+            mat-icon {
+              font-size: 30px;
+            }
+
+            &.instagram {
+              &:hover {
+                color: $color-platform-instagram;
+              }
+            }
+            &.twitter {
+              &:hover {
+                color: $color-platform-twitter;
+              }
+            }
+            &.youtube {
+              &:hover {
+                color: $color-platform-youtube;
+              }
+            }
+            &.github {
+              &:hover {
+                color: $color-platform-github;
+              }
+            }
+            &:hover {
+              animation: jelly 0.75s ease;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include desktop-1360 {
+  footer {
+    .section-wrapper {
+      &.social {
+        flex: 1.5;
+      }
+      &.legal {
+        .legal-matter-links,
+        .legal-information {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+@include desktop-1280 {
+  footer {
+    padding: 45px 65px;
+    .section-wrapper {
+      &.social {
+        flex: 1;
+      }
+    }
+  }
+}
+
+@include desktop-812 {
+  footer {
+    flex-direction: column;
+    padding: 25px 25px;
+    .section-wrapper {
+      width: 100%;
+
+      &.links {
+        display: block;
+        text-align: center;
+
+        .links-container {
+          display: block;
+
+          .link {
+            display: inline-block;
+            margin: 5px;
+            font-size: 15px;
+          }
+        }
+      }
+
+      &.social {
+        padding: 10px 0px;
+
+        .social-media {
+          font-size: 27px;
+        }
+      }
+
+      &.legal {
+        display: block;
+
+        .legal-matter-links,
+        .legal-information {
+          text-align: center;
+        }
+
+        .legal-matter-links {
+          .legal-matter-link {
+            display: inline-block;
+            margin: 0px 3px;
+          }
+        }
+      }
+    }
+  }
+}

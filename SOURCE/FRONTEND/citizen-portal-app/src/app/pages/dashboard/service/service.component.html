@@ -1,0 +1,11 @@
+<h1>{{ 'service' | translate }}</h1>
+
+<!-- New service -->
+<button color="primary" mat-fab (click)="openServiceDialog()">
+  <mat-icon>miscellaneous_services</mat-icon>
+</button>
+
+<!-- Services -->
+<div id="services">
+  <mat-card *ngFor="let service of services"> test </mat-card>
+</div>

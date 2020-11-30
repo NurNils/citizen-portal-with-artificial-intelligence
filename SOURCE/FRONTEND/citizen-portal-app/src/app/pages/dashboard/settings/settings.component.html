@@ -1,0 +1,169 @@
+<!-- Change username -->
+<app-card-wrapper>
+  <h1>{{ 'change-username' | translate }}</h1>
+  <form [formGroup]="usernameFormGroup" (ngSubmit)="changeUsername()" autocomplete="on">
+    <!-- Name or E-Mail -->
+    <mat-form-field appearance="outline">
+      <mat-label for="nickname">{{ 'username' | translate }}</mat-label>
+      <input
+        matInput
+        color="primary"
+        formControlName="username"
+        id="nickname"
+        name="nickname"
+        required
+      />
+      <mat-error *ngIf="usernameFormGroup.get('username')?.hasError('required')">
+        {{ 'username-required' | translate }}
+      </mat-error>
+      <mat-error
+        *ngIf="
+          usernameFormGroup.get('username')?.hasError('minlength') ||
+          usernameFormGroup.get('username')?.hasError('maxlength')
+        "
+      >
+        {{ 'username-min-max' | translate }}
+      </mat-error>
+      <mat-error *ngIf="usernameFormGroup.get('username')?.hasError('pattern')">
+        {{ 'username-invalid' | translate }}
+      </mat-error>
+      <mat-hint *ngIf="usernameFormGroup.get('username')?.valid" [ngStyle]="{ color: 'green' }">
+        {{ 'username-valid' | translate }}
+      </mat-hint>
+      <mat-hint align="end"
+        >{{
+          usernameFormGroup.get('username')?.value
+            ? usernameFormGroup.get('username')?.value.length
+            : 0
+        }}
+        / 100</mat-hint
+      >
+      <button
+        type="button"
+        *ngIf="usernameFormGroup.get('username')?.value"
+        matSuffix
+        mat-icon-button
+        (click)="usernameFormGroup.get('username')?.patchValue(null)"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <!-- Password -->
+    <mat-form-field appearance="outline">
+      <mat-label for="password">{{ 'password' | translate }}</mat-label>
+      <input
+        type="password"
+        matInput
+        color="primary"
+        formControlName="password"
+        id="password"
+        name="password"
+        required
+      />
+    </mat-form-field>
+    <button mat-raised-button type="submit" color="primary" [disabled]="usernameFormGroup?.invalid">
+      {{ 'update' | translate }}
+    </button>
+  </form>
+</app-card-wrapper>
+
+<!-- Change email -->
+<app-card-wrapper>
+  <h1>{{ 'change-email' | translate }}</h1>
+  <form [formGroup]="emailFormGroup" (ngSubmit)="changeEmail()" autocomplete="on">
+    <!-- Name or E-Mail -->
+    <mat-form-field appearance="outline">
+      <mat-label for="nickname">{{ 'e-mail' | translate }}</mat-label>
+      <input
+        matInput
+        color="primary"
+        formControlName="email"
+        id="nickname"
+        name="nickname"
+        required
+      />
+      <mat-error *ngIf="emailFormGroup.get('email')?.hasError('required')">
+        {{ 'e-mail-required' | translate }}
+      </mat-error>
+      <mat-error
+        *ngIf="
+          emailFormGroup.get('email')?.hasError('minlength') ||
+          emailFormGroup.get('email')?.hasError('maxlength')
+        "
+      >
+        {{ 'e-mail-min-max' | translate }}
+      </mat-error>
+      <mat-error *ngIf="emailFormGroup.get('email')?.hasError('pattern')">
+        {{ 'e-mail-invalid' | translate }}
+      </mat-error>
+      <mat-hint *ngIf="emailFormGroup.get('email')?.valid" [ngStyle]="{ color: 'green' }">
+        {{ 'e-mail-valid' | translate }}
+      </mat-hint>
+      <mat-hint align="end"
+        >{{ emailFormGroup.get('email')?.value ? emailFormGroup.get('email')?.value.length : 0 }} /
+        100</mat-hint
+      >
+      <button
+        type="button"
+        *ngIf="emailFormGroup.get('email')?.value"
+        matSuffix
+        mat-icon-button
+        (click)="emailFormGroup.get('email')?.patchValue(null)"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <!-- Password -->
+    <mat-form-field appearance="outline">
+      <mat-label for="password">{{ 'password' | translate }}</mat-label>
+      <input
+        type="password"
+        matInput
+        color="primary"
+        formControlName="password"
+        id="password"
+        name="password"
+        required
+      />
+    </mat-form-field>
+    <button mat-raised-button type="submit" color="primary" [disabled]="emailFormGroup?.invalid">
+      {{ 'update' | translate }}
+    </button>
+  </form>
+</app-card-wrapper>
+
+<!-- Change password -->
+<app-card-wrapper>
+  <h1>{{ 'change-password' | translate }}</h1>
+  <form [formGroup]="passwordFormGroup" (ngSubmit)="changePassword()" autocomplete="on">
+    <!-- Password 1 -->
+    <mat-form-field appearance="outline">
+      <mat-label for="password1">{{ 'password' | translate }}</mat-label>
+      <input
+        type="password"
+        matInput
+        color="primary"
+        formControlName="password1"
+        id="password1"
+        name="password1"
+        required
+      />
+    </mat-form-field>
+    <!-- Password 2-->
+    <mat-form-field appearance="outline">
+      <mat-label for="password2">{{ 'password' | translate }}</mat-label>
+      <input
+        type="password"
+        matInput
+        color="primary"
+        formControlName="password2"
+        id="password2"
+        name="password2"
+        required
+      />
+    </mat-form-field>
+    <button mat-raised-button type="submit" color="primary" [disabled]="passwordFormGroup?.invalid">
+      {{ 'update' | translate }}
+    </button>
+  </form>
+</app-card-wrapper>

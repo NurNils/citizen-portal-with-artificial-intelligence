@@ -1,0 +1,33 @@
+<!-- Dashboard -->
+<h1 id="title">{{ 'dashboard' | translate }}</h1>
+<p id="description">{{ 'dashboard-info' | translate }}</p>
+<div id="dashboard">
+  <!-- Tranings -->
+  <mat-card>
+    <h2>{{ 'training' | translate }}</h2>
+    <mat-icon id="training">psychology</mat-icon>
+    <p class="total">{{ data.trainings.total | number }}</p>
+    <p class="own">{{ data.trainings.own | number }}</p>
+  </mat-card>
+  <!-- Articles -->
+  <mat-card>
+    <h2>{{ 'article' | translate }}</h2>
+    <mat-icon id="article">article</mat-icon>
+    <p class="total">{{ data.articles.total | number }}</p>
+    <p class="own">{{ data.articles.own | number }}</p>
+  </mat-card>
+  <!-- Companies -->
+  <mat-card>
+    <h2>{{ 'business' | translate }}</h2>
+    <mat-icon id="business">store</mat-icon>
+    <p class="total">{{ data.companies.total | number }}</p>
+    <p class="own">{{ data.companies.own | number }}</p>
+  </mat-card>
+  <!-- Services -->
+  <mat-card>
+    <h2>{{ 'service' | translate }}</h2>
+    <mat-icon id="service">miscellaneous_services</mat-icon>
+    <p class="total">{{ data.services.total | number }}</p>
+    <p class="own">{{ data.services.own | number }}</p>
+  </mat-card>
+</div>

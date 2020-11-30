@@ -1,0 +1,67 @@
+@import '../../../shared/styles/';
+
+#title {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 36px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#description {
+  text-align: center;
+  font-size: 24px;
+  padding: 0 20px;
+  line-height: 30px;
+  max-width: 750px;
+  margin: 0 auto 70px;
+}
+
+#dashboard {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  mat-card {
+    text-align: center;
+    flex: 1;
+    margin: 20px;
+    h2 {
+      font-size: 24px;
+    }
+    mat-icon {
+      font-size: 125px;
+      height: 125px;
+      width: 125px;
+      -webkit-animation: pulsate 4s ease-out;
+      -webkit-animation-iteration-count: infinite;
+      opacity: 0.3;
+      &#training {
+        color: $color-green-500;
+      }
+      &#article {
+        color: $color-blue-500;
+      }
+      &#business {
+        color: $color-orange-500;
+      }
+      &#service {
+        color: $color-purple-500;
+      }
+    }
+    .total {
+      font-size: 24px;
+      font-weight: bold;
+      display: none;
+    }
+    .own {
+      font-size: 20px;
+      display: none;
+    }
+  }
+}
+
+@include desktop-812 {
+  #dashboard {
+    flex-direction: column;
+  }
+}

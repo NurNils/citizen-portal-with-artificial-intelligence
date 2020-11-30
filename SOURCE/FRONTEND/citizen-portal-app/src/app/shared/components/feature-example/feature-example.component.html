@@ -1,0 +1,23 @@
+<!-- Feature -->
+<div class="feature">
+  <!-- Text / Content -->
+  <div class="content-container">
+    <h2 class="title">
+      <a *ngIf="routerLink" [routerLink]="[routerLink]">
+        {{ title }}
+      </a>
+      <span *ngIf="!routerLink">
+        {{ title }}
+      </span>
+    </h2>
+    <markdown class="description opened" data="{{ description }}"></markdown>
+  </div>
+  <!-- Image -->
+  <div class="thumbnail-container">
+    <figure>
+      <img *ngIf="imageSrc" class="thumbnail" alt="{{ imageAlt }}" src="{{ imageSrc }}" />
+      <figcaption *ngIf="imageFigcaption">{{ imageFigcaption }}</figcaption>
+    </figure>
+    <ng-content></ng-content>
+  </div>
+</div>

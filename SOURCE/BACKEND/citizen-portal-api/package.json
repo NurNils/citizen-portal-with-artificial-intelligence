@@ -1,0 +1,28 @@
+{
+  "name": "citizen-portal-api",
+  "version": "1.0.0",
+  "description": "Citizen Portal REST API",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "format": "prettier --write \"./**/*.{js,json,ts,html,scss}\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nils-Christopher Wiesenauer",
+  "license": "ISC",
+  "homepage": "https://citizen-portal.com",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "brain.js": "^2.0.0-beta.2",
+    "cookie-parser": "^1.4.5",
+    "csv-parser": "^3.0.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "https": "^1.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.12",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.0"
+  }
+}

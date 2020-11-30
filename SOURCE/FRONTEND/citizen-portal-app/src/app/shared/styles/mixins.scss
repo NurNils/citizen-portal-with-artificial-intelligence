@@ -1,0 +1,43 @@
+// All defined responsive mixins
+@mixin desktop-custom($size) {
+  @media only screen
+    and (max-width: #{$size}) {
+    @content;
+  }
+}
+
+@mixin desktop-812 {
+  @media only screen and (max-width: 812px) {
+    @content;
+  }
+}
+
+@mixin desktop-1024 {
+  @media only screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop-1280 {
+  @media only screen and (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin desktop-1360 {
+  @media only screen and (max-width: 1360px) {
+    @content;
+  }
+}
+
+@mixin desktop-1440 {
+  @media only screen and (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin desktop-1600 {
+  @media only screen and (max-width: 1600px) {
+    @content;
+  }
+}

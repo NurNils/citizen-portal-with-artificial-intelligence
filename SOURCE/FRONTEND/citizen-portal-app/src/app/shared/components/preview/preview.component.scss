@@ -1,0 +1,57 @@
+@import '../../styles';
+
+#preview {
+  // background-image: url('../../../../assets/images/background.webp');
+  // background-position: center top;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background: linear-gradient(-45deg, #fff, #000, #395ba8);
+  animation: gradient 15s ease infinite;
+  height: 400px;
+  padding: 50px 20px 90px 20px;
+  text-align: center;
+  overflow: hidden;
+  img {
+    width: 75%;
+    max-width: 550px;
+    margin-top: 90px;
+  }
+  button {
+    font-size: 26px;
+    padding: 10px 20px;
+    white-space: pre-wrap !important;
+    margin-bottom: 30px;
+  }
+  .wave {
+    background: url(../../../../assets/images/wave.svg) repeat-x;
+    position: relative;
+    width: 6400px;
+    height: 198px;
+    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+    z-index: -1;
+  }
+
+  .wave:nth-of-type(2) {
+    top: -175px;
+    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
+      swell 7s ease -1.25s infinite;
+    opacity: 1;
+  }
+}
+
+@include desktop-812 {
+  #preview {
+    height: 200px;
+    .wave {
+      display: none;
+    }
+    img {
+      margin-top: 25px;
+    }
+    button {
+      font-size: 18px;
+      padding: 5px 10px;
+    }
+  }
+}

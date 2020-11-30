@@ -1,0 +1,25 @@
+.article {
+  max-width: 1500px;
+  margin: 20px auto;
+  .category {
+    text-transform: uppercase;
+  }
+  .title {
+    font-size: 35px;
+    line-height: 35px;
+  }
+  .thumbnail {
+    width: 100%;
+    max-width: 1000px;
+    display: block;
+    margin: 20px auto;
+  }
+  markdown {
+    max-width: 800px;
+    margin: 20px auto;
+    display: block;
+    &::ng-deep p {
+      font-size: 20px;
+    }
+  }
+}

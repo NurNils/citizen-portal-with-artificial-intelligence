@@ -1,0 +1,22 @@
+@import '../../styles';
+
+.feature-group {
+  ::ng-deep {
+    app-tutorial .tutorial {
+      display: block !important;
+      text-align: center;
+    }
+    app-feature-example {
+      &:nth-of-type(even) {
+        .feature {
+          .content-container {
+            order: 2;
+          }
+          .thumbnail-container {
+            order: 1;
+          }
+        }
+      }
+    }
+  }
+}

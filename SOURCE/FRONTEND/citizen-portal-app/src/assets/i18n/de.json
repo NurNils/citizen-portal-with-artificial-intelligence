@@ -1,0 +1,163 @@
+{
+  "activated": "Aktivieren?",
+  "article": "Beitrag",
+  "article-dialog": {
+    "title": "Artikel erstellen/editieren",
+    "subtitle": "Bitte gebe die gewünschten Informationen an."
+  },
+  "article-messages": {
+    "created": "Artikel wurde erfolgreich erstellt.",
+    "edited": "Artikel wurde erfolgreich aktualisiert.",
+    "deleted": "Artikel wurde erfolgreich gelöscht.",
+    "duplicated": "Artikel wurde erfolgreich dupliziert.",
+    "not-found": "Artikel konnte nicht gefunden werden."
+  },
+  "business": "Unternehmen",
+  "cancel": "Abbrechen",
+  "category": "Kategorie",
+  "categories": {
+    "corona": "Corona",
+    "kfz": "KFZ"
+  },
+  "change-email": "E-Mail-Adresse ändern",
+  "change-password": "Passwort ändern",
+  "change-username": "Benutzername ändern",
+  "choose-category": "Kategorie wählen",
+  "contact": "Kontakt",
+  "corona": "Corona",
+  "created-by": "Erstellt von NurNils",
+  "dashboard": "Dashboard",
+  "dashboard-info": "Herzlich Willkommen im Dashboard des Bürgerportals. Hier haben Sie die Möglichkeit eigene Artikel, Unternehmen oder verschiedene Dienstleistungen anzubieten. Desweiteren können Sie unsere KI trainieren.",
+  "delete": "Löschen",
+  "description": "Beschreibung",
+  "duplicate": "Duplizieren",
+  "edit": "Editieren",
+  "faq": "FAQ",
+  "home": "Startseite",
+  "key": "Einzigartiger Name",
+  "legal-notice": "Impressum",
+  "other": "weiteres",
+  "others": "weitere",
+  "pending": "Auf Training warten...",
+  "privacy-policy": "Datenschutzerklärung",
+  "quicklinks": {
+    "preferred-license-plate": "Wunschkennzeichen",
+    "quick-tests": "Schnelltests",
+    "corona-vaccination": "Corona Impfung",
+    "waste-management": "Abfallwirtschaft",
+    "visit-invitation": "Besuchseinladung",
+    "instruction-food": "Belehrung Lebensmittel",
+    "contact-options": "Kontaktmöglichkeiten",
+    "opening-hours": "Öffnungszeiten"
+  },
+  "save": "Speichern",
+  "search": "Suche",
+  "search-info": "Gesucht nach {{search}}. Es wurden {{results}} Ergebnisse gefunden.",
+  "search-terms": "Suchbegriffe eingeben...",
+  "settings": "Einstellungen",
+  "settings-messages": {
+    "success": "Deine Einstellung wurde erfolgreich geändert."
+  },
+  "status": "Status",
+  "terms-and-conditions": "AGB",
+  "thumbnail": "Thumbnail",
+  "title": "Titel",
+  "trained": "Suchbegriff ist trainiert",
+  "training": "KI trainieren",
+  "training-information": "Vielen Dank, dass Sie uns dabei unterstützen, unsere Suche noch effizienter und besser zu gestalten. Unten finden Sie alle Informationen für die Eingabe und den damit resultierenden Trainings für unsere Suche mit künstlicher Intelligenz.",
+  "training-messages": {
+    "success": "Training erfolgreich hinzugefügt. Wir werden unsere KI bald damit trainieren. Vielen Dank"
+  },
+  "translate-item": {
+    "title": "Text übersetzen",
+    "subtitle": "Hier kannst du alle verfügbaren Sprachen einstellen.",
+    "markdown-preview": "Markdown anzeigen?"
+  },
+  "update": "Aktualisieren",
+  "welcome-message": "Herzlich willkommen auf dem neuen intelligenten Bürgerportal.",
+  "home-content": {
+    "text1": {
+      "title": "Bürgerportal der Zukunft",
+      "description": "Dieses Projekt wurde von Nils-Christopher Wiesenauer im Auftrag der evia solutions GmbH während des 3. und 4. Semesters im Rahmen des Projektes T2000 entwickelt. Der Hauptzweck dieser Web-Applikation ist die Konzeptionierung und Entwicklung eines Bürgerportals mit einer integrierten künstlichen Intelligenz."
+    },
+    "text2": {
+      "title": "Künstliche Intelligenz",
+      "description": "Zur Erweiterung des Bürgerportal mit einer intelligenten Suche dient Brain.js. Brain.js ist eine GPU-beschleunigte Bibliothek für Neuronale Netze, die in JavaScript geschrieben ist. Hierbei handelt es sich um eine Fortsetzung der von harthur entwickelten einfachen JavaScript-Bibliothek für Neuronale Netzwerke namens brain, die nicht mehr gepflegt wird."
+    },
+    "text3": {
+      "title": "Dashboard",
+      "description": "Um das Wissen der Künstlichen Intelligenz und somit die Suchergebnisse zu verbessern, können Sie sich ganz einfach einen Account erstellen. Zudem existiert die Möglichkeit eigene Unternehmen zu registrieren und Artikel zu veröffentlichen. Wir wünschen viel Spaß dabei."
+    },
+    "text4": {
+      "title": "Corona",
+      "description": "Erhalten Sie Informationen über die aktuellen Fallzahlen sowie Infos und Lockerungen zu den jeweiligen Stadt- und Landkreisen in Baden-Württemberg. Jeden Tag aktualisieren wir unsere Daten mit den aktuellen, die uns das Robert-Koch-Institut (RKI) und das Center for System Science and Engineering (CSSE) der John Hopkins Universität liefert."
+    },
+    "feature1": {
+      "title": "Unternehmen",
+      "description": "Dieses Projekt wurde im Auftrag der evia solutions GmbH entworfen."
+    },
+    "feature2": {
+      "title": "GitHub",
+      "description": "Das Repository und der dazugehörige Quellcode befindet sich auf GitHub."
+    },
+    "feature3": {
+      "title": "Twitter",
+      "description": "Informationen und Neuigkeiten zum Projekt finden Sie auf Twitter."
+    }
+  },
+  "corona-content": {
+    "title": "Aktuelle Zahlen in Baden-Württemberg",
+    "total": "Insgesamt",
+    "from": "davon sind",
+    "data-confirmed": "Menschen sind erkrankt",
+    "data-seven-days": "7-Tage-Entwicklung:",
+    "data-recovered": "bereits genesen",
+    "data-new-confirmed": "Neuinfektionen",
+    "data-new-confirmedrate": "Neuinfektionsrate",
+    "data-date": "Stand: {{value}}, Quelle: Land",
+    "percentage-of-total": "aller Einwohner",
+    "percentage-of-confirmed": "der Erkrankten",
+    "information": "Die Zahlen der Landesbehörden und Kreise können wegen des Meldeverzugs vom RKI abweichen."
+  },
+  "username-or-email": "Nutzername oder E-Mail-Adresse",
+  "username-or-email-required": "Bitte geben Sie eine E-Mail-Adresse oder einen Nutzernamen an.",
+  "username-or-email-min-max": "Die Eingabe muss zwischen 3 und 100 Zeichen lang sein.",
+  "username-or-email-invalid": "Die Eingabe ist ungültig.",
+  "username-or-email-valid": "Die Eingabe ist gültig.",
+  "username": "Nutzername",
+  "username-required": "Bitte geben Sie Ihren gewünschten Nutzernamen an.",
+  "username-min-max": "Der Nutzername muss zwischen 3 und 25 Zeichen lang sein.",
+  "username-invalid": "Der Benutzername darf nur Buchstaben von a-ZA-Z und Zahlen von 0-9 enthalten.",
+  "username-valid": "Der eingegebene Benutzername ist gültig.",
+  "e-mail": "E-Mail-Adresse",
+  "e-mail-required": "Bitte geben Sie Ihre E-Mail-Adresse an.",
+  "e-mail-min-max": "Die E-Mail-Adresse muss zwischen 3 und 100 Zeichen lang sein.",
+  "e-mail-invalid": "Die angegebene E-Mail-Adresse ist ungültig.",
+  "e-mail-valid": "Die eingegebene E-Mail-Adresse ist gültig.",
+  "password": "Passwort",
+  "repeat-password": "Passwort wiederholen",
+  "login": "Anmelden",
+  "login-info": "Bereits ein Konto? Hier anmelden.",
+  "login-messages": {
+    "success": "Erfolgreich angemeldet.",
+    "error": "Es konnte kein Account mit den angegebenen Daten gefunden werden."
+  },
+  "logout": "Abmelden",
+  "logout-messages": {
+    "success": "Erfolgreich abgemeldet.",
+    "error": "Abmeldung fehlgeschlagen. Bitte kontaktiere einen Administrator."
+  },
+  "register": "Registrieren",
+  "register-info": "Noch kein Konto? Hier registrieren.",
+  "register-messages": {
+    "success": "Registrierung erfolgreich.",
+    "error": "Es existiert bereits ein Account mit den angegebenen Daten. Bitte änderen Sie Ihre Eingabe."
+  },
+  "image-gallery": {
+    "title": "Bilder Galerie",
+    "subtitle": "Hier kannst du Bilder löschen, hochladen und auswählen.",
+    "selected": "{{amount}} Bilder ausgewählt.",
+    "uploaded": "Datei wurde erfolgreich hochgeladen.",
+    "deleted": "Datei wurde erfolgreich gelöscht."
+  }
+}

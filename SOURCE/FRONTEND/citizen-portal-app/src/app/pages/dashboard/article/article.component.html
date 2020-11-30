@@ -1,0 +1,27 @@
+<!-- Title -->
+<h1>{{ 'article' | translate }}</h1>
+
+<!-- New article -->
+<button color="primary" mat-fab (click)="openArticleDialog()">
+  <mat-icon>post_add</mat-icon>
+</button>
+
+<!-- Articles -->
+<div id="articles">
+  <mat-card class="article" *ngFor="let article of articles">
+    <div class="title">
+      <p>{{ article.key }}</p>
+    </div>
+    <div class="actions">
+      <button mat-raised-button (click)="editArticle(article)">
+        <mat-icon>edit</mat-icon> <span class="text">{{ 'edit' | translate }}</span>
+      </button>
+      <button mat-raised-button (click)="duplicateArticle(article)" color="primary">
+        <mat-icon>content_copy</mat-icon> <span class="text">{{ 'duplicate' | translate }}</span>
+      </button>
+      <button mat-raised-button (click)="deleteArticle(article)" color="warn">
+        <mat-icon>delete</mat-icon> <span class="text">{{ 'delete' | translate }}</span>
+      </button>
+    </div>
+  </mat-card>
+</div>

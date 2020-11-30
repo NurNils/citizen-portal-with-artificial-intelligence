@@ -1,0 +1,56 @@
+<!-- Footer -->
+<footer>
+  <div class="section-wrapper links">
+    <div class="links-container">
+      <a class="link" [routerLink]="['/']"
+        ><span>{{ 'home' | translate }}</span></a
+      >
+      <a class="link" [routerLink]="['/login']"
+        ><span>{{ 'login' | translate }}</span></a
+      >
+    </div>
+    <div class="links-container">
+      <a class="link" [routerLink]="['/corona']"
+        ><span>{{ 'corona' | translate }}</span></a
+      >
+      <a class="link" [routerLink]="['/search']"
+        ><span>{{ 'search' | translate }}</span></a
+      >
+    </div>
+  </div>
+  <div class="section-wrapper social">
+    <div class="images">
+      <img src="assets/images/logo.png" />
+    </div>
+  </div>
+  <div class="section-wrapper legal">
+    <div class="legal-matter-links">
+      <a class="legal-matter-link" [routerLink]="['/legal-notice']"
+        ><span>{{ 'legal-notice' | translate }}</span></a
+      >
+      <a class="legal-matter-link" [routerLink]="['/terms-and-conditions']"
+        ><span>{{ 'terms-and-conditions' | translate }}</span></a
+      >
+      <a class="legal-matter-link" [routerLink]="['/privacy-policy']"
+        ><span>{{ 'privacy-policy' | translate }}</span></a
+      >
+    </div>
+    <div class="legal-information">
+      <p class="legal-text">
+        <span>© 2020-{{ year }} {{ company }}</span>
+      </p>
+      <a href="https://github.com/NurNils" target="_blank">{{ 'created-by' | translate }}</a>
+      <div class="social">
+        <a href="{{ github }}" target="_blank" class="social-media github"
+          ><i class="fab fa-github icon" aria-hidden="true"></i
+        ></a>
+        <a href="{{ twitter }}" target="_blank" class="social-media twitter"
+          ><i class="fab fa-twitter icon" aria-hidden="true"></i
+        ></a>
+        <a href="{{ instagram }}" target="_blank" class="social-media instagram"
+          ><i class="fab fa-instagram icon" aria-hidden="true"></i
+        ></a>
+      </div>
+    </div>
+  </div>
+</footer>

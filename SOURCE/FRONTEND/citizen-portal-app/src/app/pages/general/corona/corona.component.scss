@@ -1,0 +1,85 @@
+@import '../../../shared/styles/';
+
+#content {
+  padding: 100px 0;
+  #title {
+    font-size: 42px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  #overview {
+    padding: 100px 0;
+    max-width: 750px;
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    .item {
+      flex: 1;
+    }
+    h2 {
+      font-size: 36px;
+      line-height: 10px;
+    }
+    p {
+      font-size: 20px;
+    }
+    mat-icon {
+      color: $color-red-500;
+      font-size: 100px;
+      width: 100px;
+      height: 100px;
+      -webkit-animation: pulsate 4s ease-out;
+      -webkit-animation-iteration-count: infinite;
+      opacity: 0.3;
+    }
+  }
+
+  #map {
+    display: flex;
+    #map-image {
+      text-align: right;
+      flex: 1;
+      #pin {
+        position: absolute;
+        width: 16px;
+      }
+      svg {
+        position: absolute;
+        pointer-events: none;
+      }
+      area:hover {
+        cursor: pointer;
+      }
+    }
+    #statistic {
+      flex: 1;
+      h1 {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .chart {
+    max-width: 950px;
+    margin: 0 auto;
+  }
+}
+@include desktop-812 {
+  #overview {
+    padding: 10px 0;
+    flex-direction: column;
+  }
+  #map {
+    flex-direction: column;
+    #map-image {
+      text-align: center !important;
+      transform: scale(0.6);
+      margin: -110px;
+    }
+    #statistic {
+      text-align: center;
+    }
+  }
+}

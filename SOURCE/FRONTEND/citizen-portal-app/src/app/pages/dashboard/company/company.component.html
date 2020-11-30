@@ -1,0 +1,27 @@
+<!-- Title -->
+<h1>{{ 'business' | translate }}</h1>
+
+<!-- New company -->
+<button color="primary" mat-fab (click)="openCompanyDialog()">
+  <mat-icon>post_business</mat-icon>
+</button>
+
+<!-- Companies -->
+<div id="companies">
+  <mat-card class="company" *ngFor="let company of companies">
+    <div class="title">
+      <p>{{ company.key }}</p>
+    </div>
+    <div class="actions">
+      <button mat-raised-button (click)="editCompany(company)">
+        <mat-icon>edit</mat-icon> <span class="text">{{ 'edit' | translate }}</span>
+      </button>
+      <button mat-raised-button (click)="duplicateCompany(company)" color="primary">
+        <mat-icon>content_copy</mat-icon> <span class="text">{{ 'duplicate' | translate }}</span>
+      </button>
+      <button mat-raised-button (click)="deleteCompany(company)" color="warn">
+        <mat-icon>delete</mat-icon> <span class="text">{{ 'delete' | translate }}</span>
+      </button>
+    </div>
+  </mat-card>
+</div>

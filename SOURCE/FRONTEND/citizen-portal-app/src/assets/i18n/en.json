@@ -1,0 +1,163 @@
+{
+  "activated": "Activate?",
+  "article": "Article",
+  "article-dialog": {
+    "title": "Create/Edit article",
+    "subtitle": "Please provide your desired information."
+  },
+  "article-messages": {
+    "created": "Article was created successfully.",
+    "edited": "Article was edited successfully.",
+    "deleted": "Articel was deleted successfully.",
+    "duplicated": "Article was duplicated successfully.",
+    "not-found": "Could not found article."
+  },
+  "business": "Business",
+  "cancel": "Cancel",
+  "category": "Category",
+  "categories": {
+    "corona": "Corona",
+    "kfz": "KFZ"
+  },
+  "change-email": "Change E-Mail-Address",
+  "change-password": "Change Password",
+  "change-username": "Change username",
+  "choose-category": "Choose category",
+  "contact": "Contact",
+  "corona": "Corona",
+  "created-by": "Created by NurNils",
+  "dashboard": "Dashboard",
+  "dashboard-info": "Welcome to the dashboard of the citizen portal. Here you have the possibility to offer your own articles, companies or various services. Furthermore, you can train our AI.",
+  "delete": "Delete",
+  "description": "Description",
+  "duplicate": "Duplicate",
+  "edit": "Edit",
+  "faq": "FAQ",
+  "home": "Home",
+  "key": "Unique Name",
+  "legal-notice": "Legal Notice",
+  "other": "other",
+  "others": "others",
+  "pending": "Waiting for traing...",
+  "privacy-policy": "Privacy Policy",
+  "quicklinks": {
+    "preferred-license-plate": "preferred license plate",
+    "quick-tests": "quick tests",
+    "corona-vaccination": "Corona vaccination",
+    "waste-management": "waste management",
+    "visit-invitation": "visit invitation",
+    "instruction-food": "intruction food",
+    "contact-options": "contact options",
+    "opening-hours": "opening hours"
+  },
+  "save": "Save",
+  "search": "Search",
+  "search-info": "Searched for {{search}}. {{results}} results were found.",
+  "search-terms": "Enter search terms...",
+  "settings": "Settings",
+  "settings-messages": {
+    "success": "Your setting has been successfully changed."
+  },
+  "status": "Status",
+  "terms-and-conditions": "Terms and Conditions",
+  "thumbnail": "Thumbnail",
+  "title": "Title",
+  "trained": "Search term is trained",
+  "training": "Train AI",
+  "training-information": "Thank you for helping us make our search even more efficient and better. Below you will find all the information for input and the resulting training for our artificial intelligence search.",
+  "training-messages": {
+    "success": "Training successfully added. We will train our AI with it soon. Thank you very much"
+  },
+  "translate-item": {
+    "title": "Translate text",
+    "subtitle": "Here you can set all available languages.",
+    "markdown-preview": "Activate markdown preview?"
+  },
+  "update": "Update",
+  "welcome-message": "Welcome to the new intelligent citizen portal.",
+  "home-content": {
+    "text1": {
+      "title": "Citizen portal of the future",
+      "description": "This project was developed by Nils-Christopher Wiesenauer on behalf of evia solutions GmbH during the 3rd and 4th semester as part of the project T2000. The main purpose of this web application is the conceptual design and development of a citizen portal with an integrated artificial intelligence."
+    },
+    "text2": {
+      "title": "Artificial Intelligence",
+      "description": "Brain.js is used to extend the citizen portal with an intelligent search. Brain.js is a GPU-accelerated neural network library written in JavaScript. This is a continuation of the simple JavaScript neural network library developed by harthur called brain, which is no longer maintained."
+    },
+    "text3": {
+      "title": "Dashboard",
+      "description": "To improve the knowledge of artificial intelligence and thus the search results, you can easily create an account. In addition, the possibility exists to register your own companies and publish articles. We wish you a lot of fun with it."
+    },
+    "text4": {
+      "title": "Corona",
+      "description": "Get information about the current case numbers as well as info and relaxations about the respective city and district in Baden-Württemberg. Every day we update our data with the latest ones provided by the Robert Koch Institute (RKI) and the Center for System Science and Engineering (CSSE) at John Hopkins University."
+    },
+    "feature1": {
+      "title": "Company",
+      "description": "This project was developed on behalf of evia solutions GmbH."
+    },
+    "feature2": {
+      "title": "GitHub",
+      "description": "The repository and associated source code is located on GitHub."
+    },
+    "feature3": {
+      "title": "Twitter",
+      "description": "Information and news about the project can be found on Twitter."
+    }
+  },
+  "corona-content": {
+    "title": "Current numbers in Baden-Wuerttemberg",
+    "total": "Total of",
+    "from": "thereof",
+    "data-confirmed": "people are confirmed",
+    "data-seven-days": "7-day-development:",
+    "data-recovered": "already recovered",
+    "data-new-confirmed": "new infections",
+    "data-new-confirmedrate": "new-infection-rate",
+    "data-date": "as of {{value}}, source: country",
+    "percentage-of-total": "of all citizens",
+    "percentage-of-confirmed": "of all confirmed",
+    "information": "Figures from state authorities and counties may differ from RKI due to reporting delays."
+  },
+  "username-or-email": "Username or E-Mail-Address",
+  "username-or-email-required": "Please enter an email address or username.",
+  "username-or-email-min-max": "The input must be between 3 and 100 characters long.",
+  "username-or-email-invalid": "The input is invalid.",
+  "username-or-email-valid": "The input is valid.",
+  "username": "Username",
+  "username-required": "Please enter your required username.",
+  "username-min-max": "The username must be between 3 and 25 characters long.",
+  "username-invalid": "The username must contain only letters from a-ZA-Z and numbers from 0-9.",
+  "username-valid": "The username entered is valid.",
+  "e-mail": "E-Mail-Address",
+  "e-mail-required": "Please enter your e-mail address.",
+  "e-mail-min-max": "The e-mail address must be between 3 and 100 characters long.",
+  "e-mail-invalid": "The specified e-mail address is invalid.",
+  "e-mail-valid": "The e-mail address entered is valid.",
+  "password": "Password",
+  "repeat-password": "Repeat Password",
+  "login": "Login",
+  "login-info": "Already have an account? Log in here.",
+  "login-messages": {
+    "success": "Login successful.",
+    "error": "No account with the specified data could be found."
+  },
+  "logout": "Logout",
+  "logout-messages": {
+    "success": "Logout successful.",
+    "error": "Logout failed. Please contact an administrator."
+  },
+  "register": "Register",
+  "register-info": "No account yet? Register here.",
+  "register-messages": {
+    "success": "Registration successful.",
+    "error": "An account with the specified data already exists. Please change your entry."
+  },
+  "image-gallery": {
+    "title": "Image Gallery",
+    "subtitle": "Here you can delete, upload and select images.",
+    "selected": "{{amount}} Images selected.",
+    "uploaded": "File was uploaded successfully.",
+    "deleted": "File was deleted successfully."
+  }
+}
